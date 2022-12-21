@@ -41,15 +41,15 @@ st.dataframe(df2, 1000)
 
 sgsource = "https://www.nea.gov.sg/docs/default-source/rain-area/dpsri_70km_"+year+month+day+time+"0000dBR.dpsri.png"
 print(sgsource)
-st.image("https://www.nea.gov.sg/docs/default-source/rain-area/dpsri_70km_"+year+month+day+time+"0000dBR.dpsri.png") 
-st.image("https://www.nea.gov.sg/assets/images/map/base-853.png")
+st.image("https://www.nea.gov.sg/docs/default-source/rain-area/dpsri_70km_"+year+month+day+time+"0000dBR.dpsri.png", width = 853) 
+st.image("https://www.nea.gov.sg/assets/images/map/base-853.png", width = 853)
 st.write(sgsource)
 
 
 bigsource = "https://www.nea.gov.sg/docs/default-source/rain-area-240km/dpsri_240km_"+year+month+day+time+"0000dBR.dpsri.png"
 print(bigsource)
-st.image("https://www.nea.gov.sg/docs/default-source/rain-area-240km/dpsri_240km_"+year+month+day+time+"0000dBR.dpsri.png") 
-st.image("https://www.nea.gov.sg/assets/images/map/240km-v2.jpg")
+st.image("https://www.nea.gov.sg/docs/default-source/rain-area-240km/dpsri_240km_"+year+month+day+time+"0000dBR.dpsri.png", width = 853) 
+st.image("https://www.nea.gov.sg/assets/images/map/240km-v2.jpg", width = 853)
 st.write(bigsource)
 
 st.write("Created by: Lee LK - 268")
