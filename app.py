@@ -9,10 +9,9 @@ df = pd.read_html('https://aviationweather.gov/metar/data?ids=WSSL&format=decode
 df1 = df[0]
 df2 = df[1]
 
+delta = timedelta(minutes=5)
 def round_dt(dt, delta):
     return datetime.min + math.floor((dt - datetime.min) / delta) * delta
-
-delta = timedelta(minutes=5)
 
 curndt = datetime.now()
 roundt = round_dt(curndt,delta)
@@ -33,8 +32,8 @@ print(disdt)
 
 st.title(":airplane: WSSLinfo")
 st.text("last refreshed: "+str(curndt))
-st.write(df1)
-st.write(df2)
+st.dataframe(df1, 1000)
+st.dataframe(df2)
 
 sgsource = "https://www.nea.gov.sg/docs/default-source/rain-area/dpsri_70km_"+year+month+day+time+"0000dBR.dpsri.png"
 print(sgsource)
