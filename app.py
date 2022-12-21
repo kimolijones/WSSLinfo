@@ -49,4 +49,4 @@ st.image("https://www.nea.gov.sg/assets/images/map/240km-v2.jpg")
 st.write(bigsource)
 
 st.write("Created by: Lee LK - 268")
-st.write("Github repository: https://github.com/kimolijones/WSSLinfo")
+st.write("Source code: https://github.com/kimolijones/WSSLinfo")
