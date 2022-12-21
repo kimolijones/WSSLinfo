@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 from datetime import timedelta, datetime
 import math
+import pytz
 
 st.set_page_config(page_title="WSSLInfo", page_icon=":airplane:")
 
@@ -13,7 +14,7 @@ delta = timedelta(minutes=5)
 def round_dt(dt, delta):
     return datetime.min + math.floor((dt - datetime.min) / delta) * delta
 
-curndt = datetime.now()
+curndt = datetime.now(pytz.timezone("Asia/Singapore"))
 roundt = round_dt(curndt,delta)
 disdt = roundt - timedelta(minutes=10)
 
