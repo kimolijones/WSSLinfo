@@ -23,6 +23,11 @@ month = str(disdt.month)
 day = str(disdt.day)
 time = str(disdt.hour)+str(disdt.minute)
 
+print()
+print(disdt.hour)
+print(disdt.minute)
+print(time)
+print(curndt)
 print(roundt)
 print(disdt)
 
