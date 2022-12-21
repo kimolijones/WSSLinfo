@@ -33,7 +33,7 @@ print(disdt)
 st.title(":airplane: WSSLinfo")
 st.text("last refreshed: "+str(curndt))
 st.dataframe(df1, 1000)
-st.dataframe(df2)
+st.dataframe(df2, 1000)
 
 sgsource = "https://www.nea.gov.sg/docs/default-source/rain-area/dpsri_70km_"+year+month+day+time+"0000dBR.dpsri.png"
 print(sgsource)
