@@ -10,14 +10,15 @@ df = pd.read_html('https://aviationweather.gov/metar/data?ids=WSSL&format=decode
 df1 = df[0]
 df2 = df[1]
 
-dtt = datetime(year=1, month=1, day=1, hour=0, minute=0, second=0, tzinfo=pytz.timezone("Asia/Singapore"))
+dtt = datetime(year=1, month=1, day=1, hour=0, minute=0, second=0, tzinfo=pytz.timezone("Etc/GMT-8"))
 
 delta = timedelta(minutes=5)
+
 def round_dt(dt, delta):
     return dtt + math.floor((dt - dtt) / delta) * delta
 
-curndt = datetime.now(pytz.timezone("Asia/Singapore"))
-roundt = round_dt(curndt,delta)
+curndt = datetime.now(pytz.timezone("Etc/GMT-8"))
+roundt = round_dt(curndt, delta)
 disdt = roundt - timedelta(minutes=10)
 
 year = str(disdt.year)
