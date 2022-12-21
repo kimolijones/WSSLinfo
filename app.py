@@ -23,22 +23,22 @@ disdt = roundt - timedelta(minutes=10)
 
 if disdt.month < 10:
     disdt.month = str("0" + str(disdt.month))
-else disdt.month >= 10:
+else: # disdt.month >= 10:
     disdt.month = disdt.month
 
 if disdt.day < 10:
     disdt.day = str("0" + str(disdt.month))
-else disdt.day >= 10:
+else: # disdt.day >= 10:
     disdt.day = disdt.day
 
 if disdt.hour < 10:
     disdt.hour = str("0" + str(disdt.month))
-else disdt.hour >= 10:
+else: # disdt.hour >= 10:
     disdt.hour = disdt.hour
 
 if disdt.minute < 10:
     disdt.minute = str("0" + str(disdt.month))
-else disdt.minute >= 10:
+else: # disdt.minute >= 10:
     disdt.minute = disdt.minute
 
 year = str(disdt.year)
