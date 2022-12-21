@@ -24,6 +24,8 @@ time = str(disdt.hour)+str(disdt.minute)
 print(roundt)
 print(disdt)
 
+st.title(":airplane: WSSLinfo")
+st.text("last refreshed: "+str(curndt))
 st.write(df)
 
 sgsource = "https://www.nea.gov.sg/docs/default-source/rain-area/dpsri_70km_"+year+month+day+time+"0000dBR.dpsri.png"
@@ -38,3 +40,6 @@ print(bigsource)
 st.image("https://www.nea.gov.sg/docs/default-source/rain-area-240km/dpsri_240km_"+year+month+day+time+"0000dBR.dpsri.png") 
 st.image("https://www.nea.gov.sg/assets/images/map/240km-v2.jpg")
 st.write(bigsource)
+
+st.write("Created by: Lee LK - 268")
+st.write("Github repository: https://github.com/kimolijones/WSSLinfo")
