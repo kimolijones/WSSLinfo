@@ -6,6 +6,8 @@ import math
 st.set_page_config(page_title="WSSLInfo", page_icon=":airplane:")
 
 df = pd.read_html('https://aviationweather.gov/metar/data?ids=WSSL&format=decoded&date=&hours=0&taf=on')
+df1 = df[0]
+df2 = df[1]
 
 def round_dt(dt, delta):
     return datetime.min + math.floor((dt - datetime.min) / delta) * delta
@@ -26,7 +28,8 @@ print(disdt)
 
 st.title(":airplane: WSSLinfo")
 st.text("last refreshed: "+str(curndt))
-st.write(df)
+st.write(df1)
+st.write(df2)
 
 sgsource = "https://www.nea.gov.sg/docs/default-source/rain-area/dpsri_70km_"+year+month+day+time+"0000dBR.dpsri.png"
 print(sgsource)
