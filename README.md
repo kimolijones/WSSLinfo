@@ -4,7 +4,7 @@
 
 Dependencies
 -----
-The script requires the following dependencies:
+The script requires the following dependencies to run on your local machine:
 * [streamlit](https://streamlit.io/)
 * [pandas](http://pandas.pydata.org/)
 * [datetime](https://docs.python.org/3/library/datetime.html)
@@ -15,4 +15,4 @@ These packages can be installed using [pip](https://pip.pypa.io/en/stable/) via 
 
 Run This Webapp
 -----
-To run on your computer via localhost, clone this repository and `cd` into it. Then run `streamlit run app.py` in the terminal. Otherwise, try out the app [here](https://kimolijones-wsslinfo-app-lb4n89.streamlit.app/)
+To run on your computer via localhost, clone this repository and `cd` into it. Then run `$ streamlit run app.py` in the terminal. Otherwise, try out the app [here](https://kimolijones-wsslinfo-app-lb4n89.streamlit.app/).
