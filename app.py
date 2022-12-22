@@ -58,7 +58,6 @@ st.image("https://www.nea.gov.sg/docs/default-source/rain-area/dpsri_70km_"+year
 st.image("https://www.nea.gov.sg/assets/images/map/base-853.png", width = 853)
 st.write(sgsource)
 
-
 bigsource = "https://www.nea.gov.sg/docs/default-source/rain-area-240km/dpsri_240km_"+year+month+day+time+"0000dBR.dpsri.png"
 print(bigsource)
 st.image("https://www.nea.gov.sg/docs/default-source/rain-area-240km/dpsri_240km_"+year+month+day+time+"0000dBR.dpsri.png", width = 853) 
