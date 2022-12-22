@@ -15,4 +15,4 @@ These packages can be installed using [pip](https://pip.pypa.io/en/stable/) via 
 
 Run This Webapp
 -----
-To run on your computer via localhost, clone this repository and `cd` into it. Then run `$ streamlit run app.py` in the terminal. Otherwise, try out the app [here](https://kimolijones-wsslinfo-app-lb4n89.streamlit.app/).
+To run on your computer via localhost, clone this repository and `cd` into it. Then run `streamlit run app.py` in the terminal. Otherwise, try out the app [here](https://kimolijones-wsslinfo-app-lb4n89.streamlit.app/).
