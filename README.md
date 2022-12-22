@@ -4,7 +4,6 @@
 
 Dependencies
 -----
-
 The script requires the following dependencies:
 * [streamlit](https://streamlit.io/)
 * [pandas](http://pandas.pydata.org/)
@@ -13,3 +12,7 @@ The script requires the following dependencies:
 * [lxml](https://lxml.de/)
 
 These packages can be installed using [pip](https://pip.pypa.io/en/stable/) via `pip install -r requirements.txt` in the `WSSLinfo` base directory.
+
+Run This Webapp
+-----
+To run on your computer via localhost, clone this repository and `cd` into it. Then run `streamlit run app.py` in the terminal. Otherwise, try out the app [here](https://kimolijones-wsslinfo-app-lb4n89.streamlit.app/)
