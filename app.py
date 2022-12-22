@@ -3,7 +3,6 @@ import pandas as pd
 from datetime import timedelta, datetime
 import math
 import pytz
-
 st.set_page_config(page_title="WSSLInfo", page_icon=":airplane:")
 
 df = pd.read_html('https://aviationweather.gov/metar/data?ids=WSSL&format=decoded&date=&hours=0&taf=on')
@@ -11,7 +10,6 @@ df1 = df[0]
 df2 = df[1]
 
 dtt = datetime(year=1, month=1, day=1, hour=0, minute=0, second=0, tzinfo=pytz.timezone("Etc/GMT-8"))
-
 delta = timedelta(minutes=5)
 
 def round_dt(dt, delta):
@@ -19,32 +17,27 @@ def round_dt(dt, delta):
 
 curndt = datetime.now(pytz.timezone("Etc/GMT-8"))
 roundt = round_dt(curndt, delta)
-disdt = roundt - timedelta(minutes=10)
+disdt = roundt - timedelta(minutes=15)
 
-if disdt.month < 10:
-    disdt.month = str("0" + str(disdt.month))
-else: # disdt.month >= 10:
-    disdt.month = disdt.month
+disyear = int(disdt.year)
+dismonth = int(disdt.month)
+disday = int(disdt.day)
+dishour = int(disdt.hour)
+disminute = int(disdt.minute)
 
-if disdt.day < 10:
-    disdt.day = str("0" + str(disdt.month))
-else: # disdt.day >= 10:
-    disdt.day = disdt.day
+if dismonth < 10:
+    dismonth = str("0" + str(dismonth))
+if disday < 10:
+    disday = str("0" + str(disday))
+if dishour < 10:
+    dishour = str("0" + str(dishour))
+if disminute < 10:
+    disminute = str("0" + str(disminute))
 
-if disdt.hour < 10:
-    disdt.hour = str("0" + str(disdt.month))
-else: # disdt.hour >= 10:
-    disdt.hour = disdt.hour
-
-if disdt.minute < 10:
-    disdt.minute = str("0" + str(disdt.month))
-else: # disdt.minute >= 10:
-    disdt.minute = disdt.minute
-
-year = str(disdt.year)
-month = str(disdt.month)
-day = str(disdt.day)
-time = str(disdt.hour)+str(disdt.minute)
+year = str(disyear)
+month = str(dismonth)
+day = str(disday)
+time = str(dishour)+str(disminute)
 
 print()
 print(disdt.hour)
